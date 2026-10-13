@@ -54,7 +54,7 @@ const projects = [
 
 const education = [
   {
-    school: "Carnegie Mellon University, Heinz College",
+    school: "Carnegie Mellon University",
     degree: "Master of Information Systems Management · 25% Merit Scholarship",
     dates: "Aug 2026 – Dec 2027",
     location: "Pittsburgh, PA",
