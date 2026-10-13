@@ -93,7 +93,7 @@ export default function Home() {
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Prithvi Sunilkumar</h1>
         <p className="text-lg leading-relaxed text-muted">
           Software engineer with three years at Rakuten building AI-assisted workflows, observability
-          tooling, and company-wide platforms. Now an MISM student at Carnegie Mellon, looking for{" "}
+          tooling, and company-wide platforms. Now a master&rsquo;s student in Information Systems Management at Carnegie Mellon, looking for{" "}
           <span className="text-foreground">SWE / AI / ML internships for Summer 2027</span>.
         </p>
         <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
