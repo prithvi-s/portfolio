@@ -10,6 +10,7 @@ const experience = [
     company: "Rakuten",
     role: "Software Engineer",
     dates: "Jul 2023 – Jul 2026",
+    location: "Bengaluru, India",
     bullets: [
       "Led QCC Workflow Automation, an approval-workflow platform adopted across Rakuten Group divisions worldwide. Re-architected its AI layer into a RAG pipeline over years of consultant feedback, cutting manual review time by 25%.",
       "Delivered 20+ proof-of-concept deployments for external enterprise customers on Rakuten SixthSense, a commercial observability platform, building custom OpenTelemetry components where native agents fell short.",
@@ -21,6 +22,7 @@ const experience = [
     company: "Rakuten",
     role: "Software Engineer Intern",
     dates: "Jan 2023 – Jun 2023",
+    location: "Bengaluru, India",
     bullets: [
       "Launched the first version of QCC Workflow Automation with React and Node.js; converted to a full-time offer.",
     ],
@@ -29,6 +31,7 @@ const experience = [
     company: "Diageo",
     role: "Business Analyst Intern",
     dates: "Jun 2022 – Aug 2022",
+    location: "Bengaluru, India",
     bullets: [
       "Built a Power BI dashboard on ServiceNow data tracking ticket volumes, resolution times, and SLA compliance.",
     ],
@@ -54,11 +57,13 @@ const education = [
     school: "Carnegie Mellon University, Heinz College",
     degree: "Master of Information Systems Management · 25% Merit Scholarship",
     dates: "Aug 2026 – Dec 2027",
+    location: "Pittsburgh, PA",
   },
   {
     school: "PES University",
     degree: "B.Tech in Computer Science and Engineering",
     dates: "Aug 2019 – May 2023",
+    location: "Bengaluru, India",
   },
 ];
 
@@ -119,7 +124,9 @@ export default function Home() {
                 <h3 className="font-medium">{job.company}</h3>
                 <span className="font-mono text-xs text-muted">{job.dates}</span>
               </div>
-              <p className="mb-3 text-sm text-muted">{job.role}</p>
+              <p className="mb-3 text-sm text-muted">
+                {job.role} · {job.location}
+              </p>
               <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed">
                 {job.bullets.map((b) => (
                   <li key={b}>{b}</li>
@@ -153,6 +160,7 @@ export default function Home() {
                 <span className="font-mono text-xs text-muted">{e.dates}</span>
               </div>
               <p className="text-sm text-muted">{e.degree}</p>
+              <p className="text-sm text-muted">{e.location}</p>
             </div>
           ))}
         </div>
