@@ -7,7 +7,7 @@ const links = [
 
 const experience = [
   {
-    company: "Rakuten India — Office of the CIO",
+    company: "Rakuten",
     role: "Software Engineer",
     dates: "Jul 2023 – Jul 2026",
     bullets: [
@@ -18,7 +18,7 @@ const experience = [
     ],
   },
   {
-    company: "Rakuten India",
+    company: "Rakuten",
     role: "Software Engineer Intern",
     dates: "Jan 2023 – Jun 2023",
     bullets: [
@@ -26,7 +26,7 @@ const experience = [
     ],
   },
   {
-    company: "Diageo India",
+    company: "Diageo",
     role: "Business Analyst Intern",
     dates: "Jun 2022 – Aug 2022",
     bullets: [
