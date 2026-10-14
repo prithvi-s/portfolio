@@ -1,3 +1,5 @@
+import ThemeSwitcher from "./theme-switcher";
+
 const links = [
   { label: "Resume", href: "/resume.pdf" },
   { label: "GitHub", href: "https://github.com/prithvi-s" },
@@ -179,6 +181,7 @@ export default function Home() {
       <footer className="border-t border-border pt-8 text-xs text-muted">
         © 2026 Prithvi Sunilkumar
       </footer>
+      <ThemeSwitcher />
     </main>
   );
 }
