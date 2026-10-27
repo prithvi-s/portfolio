@@ -1,4 +1,4 @@
-import ThemeSwitcher from "./theme-switcher";
+import Image from "next/image";
 
 const links = [
   { label: "Resume", href: "/resume.pdf" },
@@ -105,26 +105,36 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-col gap-12 px-6 py-16 sm:py-24">
-      <header className="flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Prithvi Sunilkumar</h1>
-        <p className="text-lg leading-relaxed text-muted">
-          Software engineer with three years at Rakuten building AI-assisted workflows, observability
-          tooling, and company-wide platforms. Currently a master&rsquo;s student in Information Systems Management at Carnegie Mellon, looking for{" "}
-          <span className="text-foreground">SWE / AI / ML internships for Summer 2027</span>.
-        </p>
-        <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              target={l.href.startsWith("http") || l.href.endsWith(".pdf") ? "_blank" : undefined}
-              rel="noopener noreferrer"
-              className="text-accent underline-offset-4 hover:underline"
-            >
-              {l.label}
-            </a>
-          ))}
-        </nav>
+      <header className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Prithvi Sunilkumar</h1>
+          <p className="text-lg leading-relaxed text-muted">
+            Software engineer with three years at Rakuten building AI-assisted workflows, observability
+            tooling, and company-wide platforms. Currently a master&rsquo;s student in Information Systems Management at Carnegie Mellon, looking for{" "}
+            <span className="text-foreground">SWE / AI / ML internships for Summer 2027</span>.
+          </p>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {links.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                target={l.href.startsWith("http") || l.href.endsWith(".pdf") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className="text-accent underline-offset-4 hover:underline"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <Image
+          src="/profile.jpg"
+          alt="Prithvi Sunilkumar"
+          width={750}
+          height={839}
+          loading="eager"
+          className="size-28 shrink-0 rounded-full border border-border object-cover object-[50%_40%] sm:size-36"
+        />
       </header>
 
       <Section title="Experience">
@@ -190,7 +200,6 @@ export default function Home() {
       <footer className="border-t border-border pt-8 text-xs text-muted">
         © 2026 Prithvi Sunilkumar
       </footer>
-      <ThemeSwitcher />
     </main>
   );
 }
