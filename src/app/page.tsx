@@ -14,10 +14,12 @@ const experience = [
     dates: "Jul 2023 – Jul 2026",
     location: "Bengaluru, India",
     bullets: [
-      "Led QCC Workflow Automation, an approval-workflow platform adopted across Rakuten Group divisions worldwide. Re-architected its AI layer into a RAG pipeline over years of consultant feedback, cutting manual review time by 25%.",
+      "Built QCC Workflow Automation from 0 → 1, an approval-workflow platform adopted across Rakuten Group divisions worldwide. Re-architected its AI layer from a single text-completion call into a RAG pipeline over years of historical consultant feedback, cutting manual review time by 25%.",
+      "Engineered QCC's Angular frontend and Node.js services, integrating OpenAI models through Rakuten's internal API gateway to help consultants draft grounded, consistent feedback.",
+      "Architected OKR Dashboard 3.0 from the ground up (React frontend, REST APIs, and database layer) for Rakuten Group's company-wide goal-tracking platform, used by teams across Japan, India, and APAC.",
+      "Cached query results and sessions in Redis, instrumented the platform with OpenSearch and Grafana, and built the interface directly from Figma designs via Figma's MCP integration.",
       "Delivered 20+ proof-of-concept deployments for external enterprise customers on Rakuten SixthSense, a commercial observability platform, building custom OpenTelemetry components where native agents fell short.",
-      "Built the React frontend, REST APIs, and database layer for Rakuten Group's company-wide OKR platform, used by teams across Japan, India, and APAC.",
-      "Replaced a fully manual release process with Jenkins CI/CD pipelines deploying Dockerized microservices.",
+      "Replaced a fully manual release process with Jenkins CI/CD pipelines that run automated tests and deploy Dockerized microservices on merge.",
     ],
   },
   {
@@ -26,7 +28,8 @@ const experience = [
     dates: "Jan 2023 – Jun 2023",
     location: "Bengaluru, India",
     bullets: [
-      "Launched the first version of QCC Workflow Automation with React and Node.js; converted to a full-time offer.",
+      "Launched the first version of QCC Workflow Automation, replacing manual consultant approval workflows.",
+      "Implemented UI components and REST APIs with React and Node.js; converted to a full-time offer.",
     ],
   },
   {
@@ -35,22 +38,22 @@ const experience = [
     dates: "Jun 2022 – Aug 2022",
     location: "Bengaluru, India",
     bullets: [
-      "Built a Power BI dashboard on ServiceNow data tracking ticket volumes, resolution times, and SLA compliance.",
+      "Designed an IT Service Management Power BI dashboard on ServiceNow data tracking ticket volumes, resolution times, and SLA compliance, and presented recommendations to IT stakeholders.",
     ],
   },
 ];
 
 const projects = [
   {
+    name: "Accessibility Bug Triage Harness",
+    status: "2026 – Present",
+    description:
+      "With Easy Alliance: an LLM triage system that classifies free-text bug reports by whether they describe a real barrier, which WCAG 2.2 criterion they fail, severity, and reproducibility. The model answers narrow typed questions while deterministic Python handles routing, with two-stage WCAG mapping (guideline, then criterion). Evaluated on calibration (ECE, Brier score, coverage vs. accuracy) over a hash-partitioned held-out split, with a leakage filter, result caching, and spend caps, benchmarked against a Claude Haiku baseline.",
+  },
+  {
     name: "Transit App",
     status: "In progress",
     description: "Details coming soon.",
-  },
-  {
-    name: "Automated Grading System",
-    status: "2023",
-    description:
-      "Undergraduate capstone: Random Forest and LSTM models that score student submissions automatically.",
   },
 ];
 
@@ -63,7 +66,7 @@ const education = [
   },
   {
     school: "PES University",
-    degree: "B.Tech in Computer Science and Engineering",
+    degree: "B.Tech in Computer Science and Engineering · GPA 3.56/4.00",
     dates: "Aug 2019 – May 2023",
     location: "Bengaluru, India",
   },
@@ -76,12 +79,18 @@ const skills = [
   "Node.js",
   "Python",
   "SQL",
+  "Express.js",
+  "Redis",
   "RAG pipelines",
   "LLM APIs",
+  "LLM evaluation",
   "Docker",
-  "OpenTelemetry",
-  "Redis",
+  "Jenkins CI/CD",
   "AWS",
+  "OpenTelemetry",
+  "OpenSearch",
+  "Grafana",
+  "Figma",
 ];
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -100,7 +109,7 @@ export default function Home() {
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Prithvi Sunilkumar</h1>
         <p className="text-lg leading-relaxed text-muted">
           Software engineer with three years at Rakuten building AI-assisted workflows, observability
-          tooling, and company-wide platforms. Now a master&rsquo;s student in Information Systems Management at Carnegie Mellon, looking for{" "}
+          tooling, and company-wide platforms. Currently a master&rsquo;s student in Information Systems Management at Carnegie Mellon, looking for{" "}
           <span className="text-foreground">SWE / AI / ML internships for Summer 2027</span>.
         </p>
         <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
